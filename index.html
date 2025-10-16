@@ -92,45 +92,11 @@
         allowfullscreen>
     </iframe>
     </div>
-
-
-  <div class="contador" id="contador">Cargando...</div>
-
-  <div class="revelacion" id="revelacion">
+    
     🕹️ <strong>¡Abre tu Steam y empieza a jugar!</strong> 🎮
       <img src="./juego.jpg" alt="juego">
-  </div>
 
   <footer>💫 Hecho con energía Saiyajin y telarañas para ti, mi amigo secreto 💫</footer>
 
-  <script>
-    // Fecha límite: hoy a la 1:00 p.m.
-    const fechaObjetivo = new Date();
-    fechaObjetivo.setHours(13, 0, 0, 0); // 1:00 p.m. del día actual
-
-    const contador = document.getElementById("contador");
-    const revelacion = document.getElementById("revelacion");
-
-    const actualizarContador = () => {
-      const ahora = new Date().getTime();
-      const tiempoRestante = fechaObjetivo - ahora;
-
-      if (tiempoRestante <= 0) {
-        contador.style.display = "none";
-        revelacion.style.display = "block";
-        clearInterval(intervalo);
-        return;
-      }
-
-      const horas = Math.floor((tiempoRestante / (1000 * 60 * 60)) % 24);
-      const minutos = Math.floor((tiempoRestante / (1000 * 60)) % 60);
-      const segundos = Math.floor((tiempoRestante / 1000) % 60);
-
-      contador.textContent = `${horas}h ${minutos}m ${segundos}s para liberar la sorpresa 💥`;
-    };
-
-    const intervalo = setInterval(actualizarContador, 1000);
-    actualizarContador();
-  </script>
 </body>
 </html>
